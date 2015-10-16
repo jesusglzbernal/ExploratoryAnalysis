@@ -87,5 +87,10 @@ shinyServer(
 	    mylin2 <- lin2()
 	    plot(dataset[,as.numeric(mylin1)], dataset[,as.numeric(mylin2)])
 	    })
+
+	# Display Documentation
+        output$doc <- renderPrint({
+	      includeHTML("doc.html")
+	    })
     }
 )
